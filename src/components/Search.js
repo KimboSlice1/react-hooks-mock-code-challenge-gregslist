@@ -1,6 +1,12 @@
 import React from "react";
 
-function Search() {
+function Search({listingsData}) {
+  const filteredName = listingsData.filter((filteredListings) => {
+    if (filteredListings === listingsData.description ) return true 
+    else{
+      return false
+    }
+  })
   function handleSubmit(e) {
     e.preventDefault();
     console.log("submitted");
